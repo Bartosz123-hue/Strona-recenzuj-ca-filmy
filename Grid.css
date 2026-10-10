@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+#container 
+{
+  width: 100%;
+  max-width: 1974px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#Logo
+{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+
+#Logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.color-toggle-btn {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.color-toggle-btn:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+}
+
+.color-toggle-btn:active {
+  transform: translateY(0);
+}
+
+#nav
+{
+  background-color: lightgrey;
+  padding: 10px;
+  width: 100%;
+  min-height: auto;
+}
+
+#nav nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+#nav a:hover {
+  background-color: #ddd;
+}
+
+#content
+{
+   padding: 20px; 
+   width: 100%;
+   flex: 1;
+}
+
+#plakat
+{
+   width: 100%;
+   padding: 10px;
+   background-color: lightgray;
+}
+
+#plakat img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#footer
+{
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 20px;
+   width: 100%;
+}
+
+@media (min-width: 768px) {
+  #container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #Logo {
+    flex-basis: 100%;
+  }
+
+  #nav {
+    flex-basis: 15%;
+    min-height: 500px;
+    padding: 10px;
+  }
+
+  #nav nav {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #nav a {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+    flex: none;
+    min-width: auto;
+  }
+
+  #content {
+    flex-basis: 65%;
+  }
+
+  #plakat {
+    flex-basis: 20%;
+    min-height: 500px;
+  }
+
+  #footer {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #Logo {
+    flex-basis: 100%;
+  }
+
+  #nav {
+    flex-basis: 12%;
+    min-height: 1024px;
+  }
+
+  #content {
+    flex-basis: 65%;
+  }
+
+  #plakat {
+    flex-basis: 23%;
+    min-height: 1024px;
+  }
+
+  #footer {
+    flex-basis: 100%;
+  }
+}
